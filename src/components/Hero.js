@@ -20,6 +20,11 @@ const Hero = () => {
           savings on stylish desks, office chairs and bookcases. Shop in-store &
           online!
         </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+          provident repellat! Voluptatem provident, eaque aspernatur nobis iste
+          facilis, a nihil fuga nostrum.
+        </p>
         <Link to='/products' className='btn hero-btn'>
           shop now
         </Link>
@@ -36,6 +41,7 @@ const Wrapper = styled.section`
   min-height: 60vh;
   display: grid;
   place-items: center;
+
   .img-container {
     display: none;
   }
@@ -50,7 +56,7 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     height: calc(100vh - 5rem);
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    gap: 10rem;
     h2 {
       margin-bottom: 2rem;
     }
@@ -67,7 +73,7 @@ const Wrapper = styled.section`
     }
     .main-img {
       width: 100%;
-      height: 550px;
+      height: 650px;
       position: relative;
       border-radius: var(--radius);
       display: block;
@@ -77,18 +83,18 @@ const Wrapper = styled.section`
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 250px;
-      transform: translateX(-50%);
+      width: 350px;
+      transform: translateX(-40%);
       border-radius: var(--radius);
     }
     .img-container::before {
       content: "";
       position: absolute;
-      width: 10%;
-      height: 80%;
+      width: 20%;
+      height: 70%;
       background: var(--clr-grey-7);
       bottom: 0%;
-      left: -9%;
+      left: -19%;
       border-radius: var(--radius);
     }
   }
