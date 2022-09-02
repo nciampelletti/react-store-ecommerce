@@ -13,7 +13,7 @@ const Footer = () => {
 }
 
 const Wrapper = styled.footer`
-  height: 4rem;
+  height: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
