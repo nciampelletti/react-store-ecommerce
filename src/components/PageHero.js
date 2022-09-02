@@ -28,13 +28,16 @@ const Wrapper = styled.section`
   align-items: center;
 
   color: var(--clr-grey-5);
+  h3 {
+    color: var(--clr-grey-3);
+  }
   a {
-    color: var(--clr-primary-3);
+    color: var(--clr-grey-5);
     padding: 0.5rem;
     transition: var(--transition);
   }
   a:hover {
-    color: var(--clr-primary-1);
+    color: var(--clr-grey-1);
   }
 `
 
