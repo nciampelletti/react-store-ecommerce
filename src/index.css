@@ -163,14 +163,14 @@ p {
   margin-top: 10rem;
   border-radius: 50%;
   border: 4px solid #ccc;
-  border-top-color: var(--clr-primary-5);
+  border-top-color: var(--clr-grey-5);
   animation: spinner 0.6s linear infinite;
 }
 
 .btn {
   text-transform: uppercase;
-  background: var(--clr-primary-5);
-  color: var(--clr-primary-10);
+  background: var(--clr-grey-5);
+  color: var(--clr-grey-10);
   padding: 0.375rem 0.75rem;
   letter-spacing: var(--spacing);
   display: inline-block;
@@ -183,8 +183,8 @@ p {
   border-color: transparent;
 }
 .btn:hover {
-  color: var(--clr-primary-1);
-  background: var(--clr-primary-7);
+  color: var(--clr-grey-1);
+  background: var(--clr-grey-7);
 }
 .title {
   text-align: center;
@@ -193,7 +193,7 @@ p {
   width: 6rem;
   height: 0.25rem;
   background: #49a6e9;
-  background: var(--clr-primary-5);
+  background: var(--clr-grey-5);
   margin-left: auto;
   margin-right: auto;
 }

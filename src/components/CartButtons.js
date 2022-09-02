@@ -1,13 +1,44 @@
-import React from 'react'
-import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { useProductsContext } from '../context/products_context'
-import { useCartContext } from '../context/cart_context'
-import { useUserContext } from '../context/user_context'
+import React from "react"
+import { FaShoppingCart, FaUserMinus, FaUserPlus } from "react-icons/fa"
+import { Link } from "react-router-dom"
+import styled from "styled-components"
+import { useProductsContext } from "../context/products_context"
+import { useCartContext } from "../context/cart_context"
+import { useUserContext } from "../context/user_context"
 
 const CartButtons = () => {
-  return <h4>cart buttons </h4>
+  const { closeSidebar } = useProductsContext()
+  const { total_items, clearCart } = useCartContext()
+  const { loginWithRedirect, logout, myUser } = useUserContext()
+
+  return (
+    <Wrapper className='cart-btn-wrapper'>
+      <Link to='/cart' className='cart-btn' onClick={closeSidebar}>
+        Cart
+        <span className='cart-container'>
+          <FaShoppingCart />
+          <span className='cart-value'>{total_items}</span>
+        </span>
+      </Link>
+
+      {myUser ? (
+        <button
+          type='button'
+          className='auth-btn'
+          onClick={() => {
+            clearCart()
+            logout({ returnTo: window.location.origin })
+          }}
+        >
+          Logout <FaUserMinus />
+        </button>
+      ) : (
+        <button type='button' className='auth-btn' onClick={loginWithRedirect}>
+          Login <FaUserPlus />
+        </button>
+      )}
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
@@ -17,10 +48,10 @@ const Wrapper = styled.div`
   width: 225px;
 
   .cart-btn {
-    color: var(--clr-grey-1);
-    font-size: 1.5rem;
+    color: var(--clr-grey-3);
+    font-size: 1.4rem;
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-1);
+    /* color: var(--clr-grey-1); */
     display: flex;
 
     align-items: center;
@@ -54,9 +85,9 @@ const Wrapper = styled.div`
     align-items: center;
     background: transparent;
     border-color: transparent;
-    font-size: 1.5rem;
     cursor: pointer;
-    color: var(--clr-grey-1);
+    color: var(--clr-grey-3);
+    font-size: 1.4rem;
     letter-spacing: var(--spacing);
     svg {
       margin-left: 5px;
