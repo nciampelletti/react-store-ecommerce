@@ -40,10 +40,6 @@ const Wrapper = styled.section`
     display: none;
   }
 
-  h2 {
-    color: var(--clr-primary-5);
-  }
-
   p {
     line-height: 2;
     max-width: 45em;
