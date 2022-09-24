@@ -1,11 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
-import heroBcg2 from "../assets/Hero_x2.jpg"
-import heroBcg from "../assets/hero_y.jpg"
-
-// import heroBcg from "../assets/hero-bcg.jpeg"
-// import heroBcg2 from "../assets/hero-bcg-2.jpeg"
+import heroBcg2 from "../../assets/Hero_x2.jpg"
+import heroBcg from "../../assets/hero_y.jpg"
 
 const Hero = () => {
   return (

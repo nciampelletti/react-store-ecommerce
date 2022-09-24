@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { services } from "../utils/constants"
+import { services } from "../../utils/constants"
 
 const Services = () => {
   return (
@@ -8,9 +8,10 @@ const Services = () => {
       <div className='section-center'>
         <article className='header'>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            reprehenderit vel explicabo est, quaerat similique minus soluta
-            perspiciatis iusto atque.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perferendis dolorum quae odit quia eveniet, nemo itaque, labore
+            repellendus blanditiis eum consequatur quos numquam. Nostrum,
+            perspiciatis.
           </p>
           <h4>We know the best how to find the best furniture for you</h4>
         </article>

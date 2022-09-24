@@ -1,12 +1,12 @@
-import Home from "./HomePage"
-import About from "./AboutPage"
+import Home from "./Home/HomePage"
+import About from "./About/AboutPage"
 import Auth from "./AuthWrapper"
-import Cart from "./CartPage"
+import Cart from "./Cart/CartPage"
 import Checkout from "./CheckoutPage"
 import Error from "./ErrorPage"
 import PrivateRoute from "./PrivateRoute"
-import Products from "./ProductsPage"
-import SingleProduct from "./SingleProductPage"
+import Products from "./Products/ProductsPage"
+import SingleProduct from "./SingleProduct/SingleProductPage"
 import AuthWrapper from "./AuthWrapper"
 
 export {

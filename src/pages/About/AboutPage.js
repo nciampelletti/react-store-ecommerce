@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { PageHero } from "../components"
-import aboutImg from "../assets/hero_y2.jpg"
+import PageHero from "../../components/layout/PageHero"
+import aboutImg from "../../assets/hero_y2.jpg"
 
 const AboutPage = () => {
   return (

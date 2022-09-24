@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { Navbar, Sidebar, Footer } from "./components"
+import { NavBar, Sidebar, Footer } from "./components"
 
 import {
   About,
@@ -19,7 +19,7 @@ function App() {
   return (
     // <AuthWrapper>
     <Router>
-      <Navbar />
+      <NavBar />
       <Sidebar />
       <Routes>
         <Route path='/' element={<Home />} />

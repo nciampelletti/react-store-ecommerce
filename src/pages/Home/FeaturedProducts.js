@@ -1,10 +1,9 @@
 import React from "react"
-import { useProductsContext } from "../context/products_context"
+import { useProductsContext } from "../../context/products_context"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
-import Error from "./Error"
-import Loading from "./Loading"
-import Product from "./Product"
+import { Error, Loading } from "../../components/ui"
+import { Product } from "."
 
 const FeaturedProducts = () => {
   const {

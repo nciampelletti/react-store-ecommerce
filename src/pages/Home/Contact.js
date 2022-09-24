@@ -11,8 +11,9 @@ const Contact = () => {
 
         <div className='content'>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ad
-            voluptatum nesciunt, excepturi a, soluta expedita reiciendis non!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet porro
+            facilis accusamus libero dolores asperiores, ex sunt quisquam iste
+            consequatur nam natus voluptatem atque itaque?
           </p>
           <form
             className='contact-form'

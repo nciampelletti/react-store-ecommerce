@@ -28,7 +28,6 @@ const ProductsContext = React.createContext()
 
 export const ProductsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  console.log("provider load")
 
   const openSidebar = () => {
     dispatch({ type: SIDEBAR_OPEN })
@@ -39,7 +38,6 @@ export const ProductsProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    console.log("provider user effect")
     fecthProducts(`${url}`)
   }, [])
 

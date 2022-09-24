@@ -1,16 +1,11 @@
 import React, { useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import { useProductsContext } from "../context/products_context"
-import { single_product_url as url } from "../utils/constants"
-import { formatPrice } from "../utils/helpers"
-import {
-  Loading,
-  Error,
-  ProductImages,
-  AddToCart,
-  Stars,
-  PageHero,
-} from "../components"
+import { useProductsContext } from "../../context/products_context"
+import { single_product_url as url } from "../../utils/constants"
+import { formatPrice } from "../../utils/helpers"
+import { Loading, Error, Stars, PageHero } from "../../components"
+import { ProductImages, AddToCart } from "."
+
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 
@@ -32,7 +27,6 @@ const SingleProductPage = () => {
   useEffect(() => {
     if (error) {
       setTimeout(() => {
-        console.log("time out")
         navigate("/")
       }, 3000)
     }
