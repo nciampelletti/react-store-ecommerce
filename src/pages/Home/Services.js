@@ -33,6 +33,8 @@ const Services = () => {
   )
 }
 
+export default Services
+
 const Wrapper = styled.section`
   background: var(--clr-grey-10);
 
@@ -97,4 +99,3 @@ const Wrapper = styled.section`
     }
   }
 `
-export default Services

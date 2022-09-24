@@ -30,6 +30,8 @@ const Hero = () => {
   )
 }
 
+export default Hero
+
 const Wrapper = styled.section`
   min-height: 60vh;
   display: grid;
@@ -92,5 +94,3 @@ const Wrapper = styled.section`
     }
   }
 `
-
-export default Hero

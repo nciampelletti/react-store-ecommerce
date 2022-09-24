@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import PageHero from "../../components/layout/PageHero"
+import { PageHero } from "../../components/layout/"
 import aboutImg from "../../assets/hero_y2.jpg"
 
 const AboutPage = () => {

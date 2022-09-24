@@ -1,5 +1,5 @@
 import React from "react"
-import { FeaturedProducts, Hero, Services, Contact } from "."
+import { Contact, FeaturedProducts, Hero, Services } from "."
 
 const HomePage = () => {
   return (
