@@ -67,10 +67,12 @@ const Wrapper = styled.section`
     color: var(--clr-grey-3);
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 45%);
   }
   .submit-btn {
     border-top-right-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 45%);
   }
   .form-input::placeholder {
     color: var(--clr-black);

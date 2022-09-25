@@ -65,6 +65,7 @@ const Wrapper = styled.section`
     p {
       color: var(--clr-grey-2);
     }
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 45%);
   }
   span {
     width: 4rem;

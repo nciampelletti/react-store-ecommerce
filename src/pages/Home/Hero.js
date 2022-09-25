@@ -73,6 +73,7 @@ const Wrapper = styled.section`
       border-radius: var(--radius);
       display: block;
       object-fit: cover;
+      box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 45%);
     }
     .accent-img {
       position: absolute;
@@ -81,6 +82,7 @@ const Wrapper = styled.section`
       width: 350px;
       transform: translateX(-40%);
       border-radius: var(--radius);
+      box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 45%);
     }
     .img-container::before {
       content: "";

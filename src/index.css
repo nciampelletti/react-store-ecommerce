@@ -183,9 +183,10 @@ p {
   transition: var(--transition);
   font-size: 0.875rem;
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); */
   border-radius: var(--radius);
   border-color: transparent;
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 45%);
 }
 .btn:hover {
   color: var(--clr-grey-1);

@@ -26,6 +26,7 @@ const Wrapper = styled.article`
     position: relative;
     background: var(--clr-black);
     border-radius: var(--radius);
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 45%);
   }
   img {
     width: 100%;
