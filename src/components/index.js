@@ -1,7 +1,6 @@
 import { CartButtons, Footer, NavBar, PageHero, Sidebar } from "./layout/"
 import { AmountButtons, Error, Loading, Stars } from "./ui"
 
-import CartContent from "./CarContent"
 import StripeCheckout from "./StripeCheckout"
 import Product from "./Product"
 
@@ -13,7 +12,6 @@ export {
   Loading,
   Error,
   Stars,
-  CartContent,
   PageHero,
   StripeCheckout,
   AmountButtons,
