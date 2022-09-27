@@ -44,6 +44,11 @@ export const services = [
   },
 ]
 
-export const products_url = "https://course-api.com/react-store-products"
+// export const products_url = "https://course-api.com/react-store-products"
 
-export const single_product_url = `https://course-api.com/react-store-single-product?id=`
+// export const single_product_url = `https://course-api.com/react-store-single-product?id=`
+
+export const products_url =
+  "https://ciampelletti-ecommerce-store.herokuapp.com/api/v1/products"
+
+export const single_product_url = `https://ciampelletti-ecommerce-store.herokuapp.com/api/v1/products/`

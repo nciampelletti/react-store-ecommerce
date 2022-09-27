@@ -9,8 +9,9 @@ const Hero = () => {
     <Wrapper className='section-center'>
       <article className='content'>
         <h2>
-          Save 15% <br />
-          on Home Office Furniture
+          75% OFF SOFAS
+          <br />
+          with purchase of regular price loveseat**
         </h2>
         <p>
           Design a home office that is both professional and personal with
