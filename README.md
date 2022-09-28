@@ -1,4 +1,4 @@
-# Main features
+## Main features
 
 1. React Router
 2. Context API
@@ -8,4 +8,4 @@
 6. MongoDB database
 7. Node's APIs
 
-# Hosted at:
+## Hosted at:
