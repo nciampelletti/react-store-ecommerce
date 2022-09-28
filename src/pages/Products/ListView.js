@@ -51,8 +51,9 @@ const Wrapper = styled.section`
     margin-bottom: 1rem;
   }
   .btn {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 45%);
   }
   @media (min-width: 992px) {
     article {

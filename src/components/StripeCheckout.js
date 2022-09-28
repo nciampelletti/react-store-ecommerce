@@ -25,7 +25,7 @@ const CheckoutForm = () => {
   const { myUser } = useUserContext()
 
   // STRIPE STUFF
-  const [succeeded, setSucceeded] = useState(false)
+  const [succeeded, setSucceeded] = useState(true)
   const [error, setError] = useState(null)
   const [processing, setProcessing] = useState("")
   const [disabled, setDisabled] = useState(true)
@@ -38,17 +38,22 @@ const CheckoutForm = () => {
   const cardStyle = {
     style: {
       base: {
-        color: "#32325d",
-        fontFamily: "Arial, sans-serif",
-        fontSmoothing: "antialiased",
+        iconColor: "#32404d",
+        color: "#fff",
+        fontWeight: "500",
+        fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
         fontSize: "16px",
+        fontSmoothing: "antialiased",
+        ":-webkit-autofill": {
+          color: "#fce883",
+        },
         "::placeholder": {
-          color: "#32325d",
+          color: "#32404d",
         },
       },
       invalid: {
-        color: "#fa755a",
-        iconColor: "#fa755a",
+        iconColor: "#FFC7EE",
+        color: "#FFC7EE",
       },
     },
   }
@@ -68,8 +73,6 @@ const CheckoutForm = () => {
           total_amount,
         })
       )
-      //console.log(data)
-      console.log(data.clientSecret)
 
       setClientSecret(data.clientSecret)
     } catch (error) {
@@ -113,7 +116,7 @@ const CheckoutForm = () => {
   return (
     <div>
       {succeeded ? (
-        <article>
+        <article className='result-format'>
           <h4>Thank you</h4>
           <h4>Your payment was successful!</h4>
           <h4>Redirecting to home page shortly</h4>
@@ -123,12 +126,14 @@ const CheckoutForm = () => {
           <h4>Hello, {myUser && myUser.name}</h4>
           <p>
             Your total is{" "}
-            {formatPrice(
-              shipping_fee +
-                total_amount +
-                (total_amount * gst_rate) / 100 +
-                (total_amount * pst_rate) / 100
-            )}
+            <span className='total-amount'>
+              {formatPrice(
+                shipping_fee +
+                  total_amount +
+                  (total_amount * gst_rate) / 100 +
+                  (total_amount * pst_rate) / 100
+              )}
+            </span>
           </p>
           <p>Test Card Number : 4242 4242 4242 4242</p>
         </article>
@@ -139,11 +144,7 @@ const CheckoutForm = () => {
           options={cardStyle}
           onChange={handleChange}
         />
-        <button
-          disabled={processing || disabled || succeeded}
-          id='submit'
-          className='btn'
-        >
+        <button disabled={processing || disabled || succeeded} id='submit'>
           <span id='button-text'>
             {processing ? <div className='spinner' id='spinnier'></div> : "Pay"}
           </span>
@@ -155,13 +156,20 @@ const CheckoutForm = () => {
           </div>
         )}
         {/* Show  a success message upon completion */}
-        <p className={succeeded ? "result-message" : "result-message hidden"}>
-          Payment succeeded, see the result in your
+        <div
+          className={
+            succeeded
+              ? "result-message result-format"
+              : "result-message hidden result-format"
+          }
+        >
+          Payment succeeded, see the result in your{" "}
           <a href={`https://dashboard.stripe.com/test/payments`}>
-            Stripe dasboard.
+            Stripe dasboard.{" "}
           </a>
+          <br></br>
           Refresh the page to pay again
-        </p>
+        </div>
       </form>
     </div>
   )
@@ -181,11 +189,10 @@ const Wrapper = styled.section`
   form {
     width: 30vw;
     align-self: center;
-    box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
-      0px 2px 5px 0px rgba(50, 50, 93, 0.1),
-      0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
+    background-color: var(--clr-primary-10) !important;
     border-radius: 7px;
     padding: 40px;
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 45%);
   }
   input {
     border-radius: 6px;
@@ -197,6 +204,9 @@ const Wrapper = styled.section`
     width: 100%;
     background: white;
     box-sizing: border-box;
+  }
+  .total-amount {
+    font-weight: 600;
   }
   .result-message {
     line-height: 22px;
@@ -231,18 +241,19 @@ const Wrapper = styled.section`
   }
   /* Buttons and links */
   button {
-    background: #5469d4;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
+    /* font-family: Roboto, "Open Sans", "Segoe UI", "sans-serif"; */
+    text-transform: uppercase;
+    background: var(--clr-grey-5);
+    color: white;
     border-radius: 0 0 4px 4px;
     border: 0;
     padding: 12px 16px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     display: block;
     transition: all 0.2s ease;
-    box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 45%);
     width: 100%;
   }
   button:hover {
@@ -252,6 +263,12 @@ const Wrapper = styled.section`
     opacity: 0.5;
     cursor: default;
   }
+
+  .result-format {
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+
   /* spinner/processing state, errors */
   .spinner,
   .spinner:before,
@@ -310,7 +327,14 @@ const Wrapper = styled.section`
       transform: rotate(360deg);
     }
   }
-  @media only screen and (max-width: 600px) {
+
+  @media only screen and (max-width: 1199.98px) {
+    form {
+      width: 50vw;
+    }
+  }
+
+  @media only screen and (max-width: 600.98px) {
     form {
       width: 80vw;
     }
