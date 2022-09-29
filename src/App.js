@@ -5,14 +5,12 @@ import { NavBar, Sidebar, Footer } from "./components"
 import {
   About,
   Home,
-  Auth,
   Cart,
   Checkout,
   Error,
   PrivateRoute,
   Products,
   SingleProduct,
-  AuthWrapper,
 } from "./pages/"
 
 function App() {
