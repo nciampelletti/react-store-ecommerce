@@ -11,10 +11,10 @@ import {
 
 import axios from "axios"
 
-import { useCartContext } from "../context/cart_context"
-import { useUserContext } from "../context/user_context"
+import { useCartContext } from "../../context/cart_context"
+import { useUserContext } from "../../context/user_context"
 
-import { formatPrice } from "../utils/helpers"
+import { formatPrice } from "../../utils/helpers"
 
 const promise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
 
@@ -25,7 +25,7 @@ const CheckoutForm = () => {
   const { myUser } = useUserContext()
 
   // STRIPE STUFF
-  const [succeeded, setSucceeded] = useState(true)
+  const [succeeded, setSucceeded] = useState(false)
   const [error, setError] = useState(null)
   const [processing, setProcessing] = useState("")
   const [disabled, setDisabled] = useState(true)
@@ -35,25 +35,43 @@ const CheckoutForm = () => {
 
   const navigate = useNavigate()
 
+  // const cardStyle = {
+  //   style: {
+  //     base: {
+  //       iconColor: "#32404d",
+  //       color: "#fff",
+  //       fontWeight: "500",
+  //       fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
+  //       fontSize: "16px",
+  //       fontSmoothing: "antialiased",
+  //       ":-webkit-autofill": {
+  //         color: "#fce883",
+  //       },
+  //       "::placeholder": {
+  //         color: "#32404d",
+  //       },
+  //     },
+  //     invalid: {
+  //       iconColor: "#FFC7EE",
+  //       color: "#FFC7EE",
+  //     },
+  //   },
+  // }
+
   const cardStyle = {
     style: {
       base: {
-        iconColor: "#32404d",
-        color: "#fff",
-        fontWeight: "500",
-        fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
-        fontSize: "16px",
+        color: "#32325d",
+        fontFamily: "Arial, sans-serif",
         fontSmoothing: "antialiased",
-        ":-webkit-autofill": {
-          color: "#fce883",
-        },
+        fontSize: "16px",
         "::placeholder": {
-          color: "#32404d",
+          color: "#32325d",
         },
       },
       invalid: {
-        iconColor: "#FFC7EE",
-        color: "#FFC7EE",
+        color: "#fa755a",
+        iconColor: "#fa755a",
       },
     },
   }

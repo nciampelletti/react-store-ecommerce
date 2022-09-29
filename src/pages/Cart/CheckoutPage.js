@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { StripeCheckout } from "../../components"
+import { StripeCheckout } from "."
 import { PageHero } from "../../components/layout/"
 import { useCartContext } from "../../context/cart_context"
 import { Link } from "react-router-dom"
